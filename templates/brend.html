@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}{% if id %}
+{{ code|safe }}
+{% endif %}{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% if data %}
+    <div class="brends">
+    {% for brend in data %}
+        <div class="brend">
+        <p><a href="/brend/{{ brend.id }}/">
+            <img src="{{ brend.img }}"  alt="img"/></a>
+        <div class="plain_text"><b>{{ brend.name }}</b></div>
+        </div>
+    {% endfor %}
+    </div>
+{% else %}
+    no brends
+{% endif %}
+{% endblock content %}

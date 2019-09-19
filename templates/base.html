@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <title>{{ title }}{% if title%}. {% endif %}ОкиПлюс. Разборка японских автомобиолей в Тирасполе.</title>
+    <link rel="stylesheet" href="{% static "css/main.css" %}"/>
+    <meta property="og:image" content="{% static "css/logo.png" %}" /> <!-- для Viber -->
+    <meta property="og:image" content="{% static "css/logo.png" %}" />
+    <meta property="og:image" content="{% static "css/logo.png" %}" /> <!-- для Telegram & WhatsApp -->
+</head>
+<body>
+<div class="frames" id="logo">
+    <a href="/"><img src="{% static "img/header.png" %}" width="100%-2px" alt="logo"></a>
+</div>
+<div id="menu" class="frames">
+    <table>
+        <tr>
+            <td><a href="/">Главная</a></td>
+            <td><a href="/brend/">Фирмы производители</a></td>
+            <td><a href="/">О нас</a></td>
+            <td><a href="/">Энциклопедия авто</a></td>
+            <td><a href="/">Наш календарик</a></td>
+        </tr>
+        <tr>
+            <td><a href="/">Цены на запчасти</a></td>
+            <td><a href="/">Рейтинг качества</a></td>
+            <td><a href="/">Наш адрес</a></td>
+            <td><a href="/">.</a></td>
+            <td><a href="/">Наши клиенты</a></td>
+        </tr>
+        <tr>
+            <td><a href="/">Прйс-листы</a></td>
+            <td><a href="/">Доставка и оплата заказов</a></td>
+            <td><a href="/">Контакты Viber</a></td>
+            <td><a href="/">Местные новости</a></td>
+            <td><a href="/">Японская реклама</a></td>
+        </tr>
+        <tr>
+            <td><a href="/">Разборка</a></td>
+            <td><a href="/">Гарантия на запчасти</a></td>
+            <td><a href="/">Наши партнеры</a></td>
+            <td><a href="/">.</a></td>
+            <td><a href="/">Все об японии</a></td>
+        </tr>
+        <tr>
+            <td><a href="/">Купим</a></td>
+            <td><a href="/">Акция</a></td>
+            <td><a href="/">Черный список</a></td>
+            <td><a href="/">Новости в мире</a></td>
+            <td><a href="http://webcam.transtelecom.md/" target="_blank">Веб-камеры</a></td>
+        </tr>
+    </table>
+</div>
+<div id="content" class="frames">{% block content %}Content{% endblock content %}</div>
+<div id="footer" class="frames">
+    <img src="{% static 'img/footer.png' %}"  width="100%" alt="footer">
+</div>
+</body>
+</html>
