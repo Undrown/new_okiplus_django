@@ -21,7 +21,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('brend/', include('brend.urls')),
-    path('pages/', include('django.contrib.flatpages.urls')),
+    path('page/', include('page.urls')),
+    path('', include('page.urls')),
     path('summernote/', include('django_summernote.urls')),
 ]
 
